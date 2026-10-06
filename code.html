@@ -1,0 +1,1274 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pistacho Studio — Content, SEO &amp; AI Systems</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;family=League+Spartan:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #090414;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090414;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #231c2f;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #17CAAC;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#3d364a",
+            "surface-variant": "#2a2238",
+            "surface-tint": "#cbbeff",
+            "on-surface": "#eadef8",
+            "on-surface-variant": "#b3aac2",
+            "outline": "#787087",
+            "outline-variant": "#3f364e",
+            "surface-container-lowest": "#06020e",
+            "surface-dim": "#090414",
+            "surface": "#0d0622",
+            "surface-container-low": "#130a2b",
+            "surface-container": "#1a0f38",
+            "surface-container-high": "#23164a",
+            "surface-container-highest": "#2e1e5e",
+            "primary": "#cbbeff",
+            "primary-container": "#7752fe",
+            "on-primary-container": "#fef8ff",
+            "secondary": "#17CAAC",
+            "secondary-container": "#16B3BF",
+            "on-secondary": "#00382e",
+            "tertiary": "#00e291",
+            "background": "#090414"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem"
+          },
+          fontFamily: {
+            "headline": ["'League Spartan'", "sans-serif"],
+            "body": ["'Hind'", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#090414] font-body text-on-surface antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- Ambient Glows -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-primary-container/20 via-secondary/10 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="fixed top-[40%] right-[-120px] w-[500px] h-[500px] bg-gradient-to-br from-primary/10 via-tertiary/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<!-- HEADER & NAVIGATION -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#090414]/90 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="h-20 w-full px-margin-mobile md:px-margin flex items-center justify-between gap-space-md max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<a class="flex items-center gap-space-sm group" href="#">
+<img alt="Pistacho Studio Logo" class="w-9 h-9 object-contain filter drop-shadow-[0_0_12px_rgba(23,202,172,0.5)] group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGyCbUy5BOzqEK2aNM1uqyYTL38PWm60nT1ONKMucpNF8R5Hftx_1fKn8PF2XS5BsSI-IPdaVR5nrVTfzlJs1z60uJzZ_JToCuubytpulQNUCdvL9S1FXoAW6s5y0uw36Z35e0FdgNq2HIgJLH0TH2cuQoRl-7-ajpus8jdrjojZIZxsFy2EAEihLkvkiVqMzsGrVoFUb8XX5nbv0T-tiVgPTlvMV4a800I1hFsmqhWtGUzOUUk0inSmSWht_nqLdmDA">
+<span class="font-headline font-black text-xl tracking-tight text-on-surface group-hover:text-primary transition-colors">PISTACHO STUDIO</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden xl:flex items-center gap-6">
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-what" href="#what-we-do">What We Do</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-story" href="#story">Story</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-system" href="#system">The System</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-who" href="#who-we-help">Who We Help</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-how" href="#how-we-work">How We Work</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-team" href="#team">Team</a>
+<a class="font-headline font-semibold text-xs tracking-wider uppercase text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-contact" href="#contact">Contact</a>
+</nav>
+<!-- Language Switcher & Primary CTA -->
+<div class="flex items-center gap-3 md:gap-space-md">
+<!-- Interactive Language Switcher -->
+<button aria-label="Toggle language" class="px-3.5 py-1.5 rounded-full border border-secondary/40 bg-surface-container-high/70 hover:border-secondary hover:bg-surface-container text-secondary font-headline font-bold text-xs tracking-wider transition-all duration-200 flex items-center gap-1.5 shadow-[0_0_12px_rgba(23,202,172,0.18)]" id="lang-toggle-btn" onclick="toggleLanguage()">
+<span class="material-symbols-outlined text-[15px]">language</span>
+<span id="lang-label" class="">EN | ESPAÑOL</span>
+</button>
+<a class="inline-flex items-center justify-center px-5 py-2 bg-primary-container hover:bg-secondary text-on-primary-container hover:text-on-secondary font-headline font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(119,82,254,0.35)] rounded" data-i18n="cta-talk" href="#contact">
+Let's Talk
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-[#090414] min-h-screen">
+<div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full px-margin-mobile md:px-margin pt-14 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col items-start">
+<!-- Top Badge -->
+<div class="inline-flex items-center gap-space-sm px-4 py-1.5 bg-surface-container-high/80 border border-secondary/30 rounded-full mb-space-lg shadow-[0_0_15px_rgba(23,202,172,0.15)]">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-headline font-bold text-xs tracking-widest text-secondary uppercase" data-i18n="hero-badge">2026 STUDIO STRATEGY · DIGITAL SYSTEMS</span>
+</div>
+<!-- Display Triad -->
+<div class="mb-4">
+<span class="font-headline font-black text-sm md:text-base tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary-container to-primary-container" data-i18n="hero-triad">
+CONTENT · SEO · AI SYSTEMS
+</span>
+</div>
+<!-- Headline & Brand Mark Lockup -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center w-full mb-8">
+<div class="lg:col-span-9">
+<h1 class="font-headline font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tighter text-on-surface leading-[0.95]" data-i18n="hero-headline">
+MAKE YOUR BUSINESS EASIER TO <span class="text-secondary underline decoration-primary-container/40 decoration-wavy underline-offset-8">FIND</span>, <span class="text-primary">TRUST</span> AND <span class="text-tertiary">GROW</span>.
+</h1>
+</div>
+<div class="lg:col-span-3 flex lg:justify-end items-center">
+<div class="relative group p-4 bg-surface-container-low border border-outline-variant/40 rounded-2xl shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/30 to-secondary/20 rounded-2xl blur-md opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="Pistacho Hexagon Emblem" class="relative w-28 h-28 md:w-36 md:h-36 object-contain filter drop-shadow-[0_0_24px_rgba(23,202,172,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ZCt2y6Hz5jO9eQJRqIM9TqeKkVl1zTil2nWFc1kcZJaqA4QT-KXhPB7ObQwjMpUk0PrIk8Z9EpqfU9JHgzrzOUwnNCNyI8cff5uX6GBWRJbYwjXTLAl1CFRzow9rC8Tyl6zkPIxWtXlBZPLTWYckIS2ZgFFEckOiwtyiegJnFngVDWPmdL4mIkNx_FPBtGfszKuv4y9mKZTiKW_toZg91GZK0mKiRG5bZUxm0R8WudIkt3A8pGSEQI2L9gOoIA7-5w">
+</div>
+</div>
+</div>
+<!-- Subtitle & Action CTAs -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter w-full pt-2">
+<div class="lg:col-span-7">
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed mb-8 max-w-2xl font-light" data-i18n="hero-sub">
+Focused digital studio helping small and growing businesses build consistent visibility, commercial authority, and smart automated operations.
+</p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="px-8 py-3.5 bg-primary-container hover:bg-secondary text-on-primary-container hover:text-on-secondary font-headline font-bold text-xs tracking-widest uppercase transition-all duration-300 shadow-[0_0_28px_rgba(119,82,254,0.4)] flex items-center gap-2 group rounded" data-i18n="hero-cta-system" href="#system">
+<span class="">Explore The System</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="px-6 py-3.5 bg-surface-container-high/60 hover:bg-surface-container border border-outline-variant text-on-surface font-headline font-bold text-xs tracking-widest uppercase transition-all duration-200 flex items-center gap-2 rounded" data-i18n="hero-cta-convo" href="#contact">
+<span class="">Start a Conversation</span>
+<span class="material-symbols-outlined text-sm text-secondary">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Triad Outcome Cards -->
+<div class="lg:col-span-5 flex flex-col justify-end gap-3.5 mt-8 lg:mt-0">
+<div class="p-4 bg-surface-container-low/90 border border-outline-variant/40 rounded-xl shadow-lg flex items-center gap-4 hover:border-secondary/40 transition-colors">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shadow-[0_0_12px_rgba(23,202,172,0.2)] shrink-0">
+<span class="material-symbols-outlined text-2xl">travel_explore</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-secondary">SEO → FIND</span>
+</div>
+<span class="font-body text-sm md:text-base text-on-surface block" data-i18n="hero-card-seo">Be discoverable when potential customers are actively searching.</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low/90 border border-outline-variant/40 rounded-xl shadow-lg flex items-center gap-4 hover:border-primary/40 transition-colors">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_12px_rgba(203,190,255,0.2)] shrink-0">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-primary">CONTENT → TRUST</span>
+</div>
+<span class="font-body text-sm md:text-base text-on-surface block" data-i18n="hero-card-content">Build clear, useful and consistent digital presence and authority.</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low/90 border border-outline-variant/40 rounded-xl shadow-lg flex items-center gap-4 hover:border-tertiary/40 transition-colors">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shadow-[0_0_12px_rgba(0,226,145,0.2)] shrink-0">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-tertiary">AI SYSTEMS → GROW</span>
+</div>
+<span class="font-body text-sm md:text-base text-on-surface block" data-i18n="hero-card-ai">Automate repetitive work, capture opportunities and build smarter workflows.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Ticker -->
+<div class="w-full py-3 bg-surface-container-lowest border-y border-outline-variant/20 overflow-hidden">
+<div class="flex whitespace-nowrap gap-space-xl opacity-80">
+<span class="font-headline font-semibold text-xs uppercase tracking-[0.3em] text-outline" data-i18n="ticker">
+FIND · TRUST · GROW · SEO ARCHITECTURE · AUTHORITY CONTENT SYSTEMS · AI AUTOMATION WORKFLOWS · NO BLOATED AGENCY HOURS · DIRECT SENIOR EXECUTION
+</span>
+</div>
+</div>
+<!-- 2. WHAT WE DO (Core Disciplines) -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-[#090414]" id="what-we-do">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="what-tag">Core Disciplines</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none" data-i18n="what-title">
+WHAT WE DO.
+</h2>
+</div>
+<p class="font-body text-base md:text-lg text-on-surface-variant max-w-md" data-i18n="what-sub">
+Three concise disciplines engineered into a unified growth engine.
+</p>
+</div>
+<!-- 3 Disciplines Bento Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: CONTENT -->
+<div class="group p-8 bg-surface-container-low/80 border border-outline-variant/30 hover:border-primary/50 rounded-2xl shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-primary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-6 shadow-sm group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-2xl">article</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-primary">Discipline 01</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-headline font-bold text-[10px] tracking-wider uppercase">TRUST</span>
+</div>
+<h3 class="font-headline font-bold text-2xl uppercase tracking-tight text-on-surface mb-3" data-i18n="card-content-title">
+CONTENT
+</h3>
+<p class="font-body text-base text-on-surface-variant mb-6 leading-relaxed" data-i18n="card-content-desc">
+Build a clear, useful and consistent digital presence. Finding ideas worth sharing, shaping them into meaningful stories, and connecting them to commercial goals.
+</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-outline block mb-3" data-i18n="card-content-core">Key Focus Areas</span>
+<ul class="space-y-2.5 font-body text-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span data-i18n="c-pt-1" class="">High-clarity messaging &amp; brand blueprint</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span data-i18n="c-pt-2" class="">Customer-facing website copy &amp; commercial framing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span data-i18n="c-pt-3" class="">Structured authority content &amp; authentic social proof</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+<span data-i18n="c-pt-4" class="">Creative direction designed for genuine audience trust</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Card 2: SEO -->
+<div class="group p-8 bg-surface-container-low/80 border border-outline-variant/30 hover:border-secondary/50 rounded-2xl shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary mb-6 shadow-sm group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-2xl">search_insights</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary">Discipline 02</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-headline font-bold text-[10px] tracking-wider uppercase">FIND</span>
+</div>
+<h3 class="font-headline font-bold text-2xl uppercase tracking-tight text-on-surface mb-3" data-i18n="card-seo-title">
+SEO
+</h3>
+<p class="font-body text-base text-on-surface-variant mb-6 leading-relaxed" data-i18n="card-seo-desc">
+Help businesses become discoverable when potential customers are actively searching for them. Technical site architecture, local search map dominance, high-intent visibility, and organic growth.
+</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-outline block mb-3" data-i18n="card-seo-core">Key Focus Areas</span>
+<ul class="space-y-2.5 font-body text-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span data-i18n="s-pt-1" class="">High-intent local &amp; regional search architecture</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span data-i18n="s-pt-2" class="">Google Business Profile optimization &amp; map dominance</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span data-i18n="s-pt-3" class="">Technical indexing, web speed &amp; site architecture hygiene</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span data-i18n="s-pt-4" class="">Search intent keyword clusters &amp; conversion ranking</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Card 3: AI SYSTEMS -->
+<div class="group p-8 bg-surface-container-low/80 border border-outline-variant/30 hover:border-tertiary/50 rounded-2xl shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-tertiary/10 rounded-full blur-xl pointer-events-none"></div>
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary mb-6 shadow-sm group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-2xl">account_tree</span>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-tertiary">Discipline 03</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-headline font-bold text-[10px] tracking-wider uppercase">GROW</span>
+</div>
+<h3 class="font-headline font-bold text-2xl uppercase tracking-tight text-on-surface mb-3" data-i18n="card-ai-title">
+AI SYSTEMS
+</h3>
+<p class="font-body text-base text-on-surface-variant mb-6 leading-relaxed" data-i18n="card-ai-desc">
+Automate repetitive work, capture opportunities, and build smarter business workflows. Streamlined customer intake, automated routing, and operational tools.
+</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-outline block mb-3" data-i18n="card-ai-core">Key Focus Areas</span>
+<ul class="space-y-2.5 font-body text-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>
+<span data-i18n="a-pt-1" class="">Inbound inquiry capture &amp; automatic lead qualification</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>
+<span data-i18n="a-pt-2" class="">Automated customer follow-ups &amp; scheduling pathways</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>
+<span data-i18n="a-pt-3" class="">Operational task automation &amp; internal tool hand-offs</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>
+<span data-i18n="a-pt-4" class="">Integrated CRM pipelines &amp; real-time business alerts</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. OUR STORY + OUR CODE -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-surface-container-lowest border-y border-outline-variant/20" id="story">
+<div class="max-w-7xl mx-auto">
+<!-- Story Header & Narrative -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start mb-16">
+<div class="lg:col-span-5">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="story-tag">Our Background &amp; Ethos</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none mb-6" data-i18n="story-title">
+WHY WE DITCHED THE CORPORATE MACHINE.
+</h2>
+<div class="grid grid-cols-3 gap-4 pt-4 border-t border-outline-variant/30">
+<div>
+<span class="font-headline font-black text-2xl sm:text-3xl text-secondary block">10+</span>
+<span class="font-body text-xs text-outline uppercase tracking-wider" data-i18n="proof-1">Years of Experience</span>
+</div>
+<div>
+<span class="font-headline font-black text-2xl sm:text-3xl text-primary block">0%</span>
+<span class="font-body text-xs text-outline uppercase tracking-wider" data-i18n="proof-2">Unnecessary Layers</span>
+</div>
+<div>
+<span class="font-headline font-black text-2xl sm:text-3xl text-tertiary block">100%</span>
+<span class="font-body text-xs text-outline uppercase tracking-wider" data-i18n="proof-3">Partner Attention</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-10 rounded-2xl border border-outline-variant/30 shadow-xl">
+<p class="font-body text-lg md:text-xl text-on-surface leading-relaxed font-light mb-6" data-i18n="story-text-1">
+Pistacho Studio was born when four colleagues, after years working across corporate communications and IT environments, decided there had to be a more direct, honest and enjoyable way to do great work.
+</p>
+<p class="font-body text-base text-on-surface-variant leading-relaxed" data-i18n="story-text-2">
+We've seen what works, what doesn't, and how easily complexity can get in the way of good ideas. We prefer working directly with people who care about their businesses, understanding the real problem and taking the most efficient path to solving it.
+</p>
+</div>
+</div>
+<!-- OUR CODE (4 Principles) -->
+<div class="pt-8">
+<div class="flex items-center gap-3 mb-8">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline font-bold text-xs uppercase tracking-[0.2em] text-secondary" data-i18n="code-heading">OUR CODE: CONTENT, SEO &amp; AI SYSTEMS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Principle 01 -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<span class="font-headline font-black text-2xl text-secondary block mb-2">01</span>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-3" data-i18n="code-1-title">
+STRATEGY GIVES CONTENT A PURPOSE.
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="code-1-desc">
+We don't create content just to fill a feed. We find the ideas worth sharing, shape them into meaningful stories and connect them to real business goals.
+</p>
+</div>
+<!-- Principle 02 -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-primary/40 transition-colors">
+<span class="font-headline font-black text-2xl text-primary block mb-2">02</span>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-3" data-i18n="code-2-title">
+DETAILS MAKE THE DIFFERENCE.
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="code-2-desc">
+From a headline to a search strategy, from a landing page to an automated workflow, we care about the details that make digital work clearer, sharper and more effective.
+</p>
+</div>
+<!-- Principle 03 -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-tertiary/40 transition-colors">
+<span class="font-headline font-black text-2xl text-tertiary block mb-2">03</span>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-3" data-i18n="code-3-title">
+EVERY BUSINESS HAS SOMETHING WORTH SAYING.
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="code-3-desc">
+We look beyond the surface to find what makes a business valuable, relevant and different — then turn that insight into content, visibility and growth.
+</p>
+</div>
+<!-- Principle 04 -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<span class="font-headline font-black text-2xl text-secondary block mb-2">04</span>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-3" data-i18n="code-4-title">
+GOOD WORK SHOULD MAKE THINGS SIMPLER.
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="code-4-desc">
+We bring content, SEO and AI systems together to help businesses communicate better, get discovered and work smarter — without unnecessary complexity.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. THE PISTACHO SYSTEM (Consultative Progression) -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-[#090414]" id="system">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="sys-tag">Consultative Progression</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none mb-4" data-i18n="sys-title">
+THE PISTACHO SYSTEM.
+</h2>
+<p class="font-body text-base md:text-xl text-on-surface-variant max-w-3xl font-light" data-i18n="sys-sub">
+A connected, progressive model tailored to your business needs. We start by diagnosing where you are, then move into priority action and long-term partnership.
+</p>
+</div>
+<!-- Visual Progression Indicator -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/30 mb-10 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-secondary/20 text-secondary font-headline font-bold text-xs uppercase tracking-wider">START</span>
+<span class="font-headline text-xs uppercase tracking-wider text-on-surface" data-i18n="prog-1">Audit → Understand</span>
+</div>
+<span class="material-symbols-outlined text-outline hidden md:block">arrow_forward</span>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-primary-container/40 text-primary font-headline font-bold text-xs uppercase tracking-wider">GROW</span>
+<span class="font-headline text-xs uppercase tracking-wider text-on-surface" data-i18n="prog-2">Implement → Improve</span>
+</div>
+<span class="material-symbols-outlined text-outline hidden md:block">arrow_forward</span>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-tertiary/20 text-tertiary font-headline font-bold text-xs uppercase tracking-wider">SCALE</span>
+<span class="font-headline text-xs uppercase tracking-wider text-on-surface" data-i18n="prog-3">Build → Evolve</span>
+</div>
+</div>
+<!-- 3 Connected Level Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter items-stretch mb-12">
+<!-- LEVEL 01: START -->
+<div class="p-8 bg-surface-container rounded-2xl border border-outline-variant/30 flex flex-col justify-between relative shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-surface-container-high rounded text-secondary font-headline font-bold text-xs uppercase tracking-wider">LEVEL 01</span>
+<span class="font-headline text-xs uppercase tracking-wider text-outline" data-i18n="lvl1-badge">DIAGNOSIS &amp; ROADMAP</span>
+</div>
+<h3 class="font-headline font-black text-3xl uppercase tracking-tight text-on-surface mb-1">
+START
+</h3>
+<span class="font-headline font-semibold text-sm text-secondary uppercase tracking-widest block mb-4" data-i18n="lvl1-sub">Audit &amp; Strategy</span>
+<p class="font-body text-base text-on-surface mb-4 font-medium" data-i18n="lvl1-pos">
+“Understand where you are. Know what to fix. Get a clear roadmap.”
+</p>
+<p class="font-body text-sm text-on-surface-variant mb-6 pb-4 border-b border-outline-variant/20 leading-relaxed" data-i18n="lvl1-nature">
+Consulting and diagnostic engagement across Content, SEO, and AI Systems. We analyze what is working, what is not, where the biggest opportunities lie, and what to prioritize.
+</p>
+<div class="p-3 bg-surface-container-high/60 rounded-lg mb-6">
+<span class="font-body text-xs text-outline italic block" data-i18n="lvl1-note">
+* A diagnostic audit providing strategic recommendations without execution at this stage.
+</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<a class="w-full block py-3 text-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-secondary font-headline font-bold text-xs uppercase tracking-widest rounded transition-colors" data-i18n="lvl1-btn" href="#contact" onclick="setFormPriority('start')">
+Request an Audit →
+</a>
+</div>
+</div>
+<!-- LEVEL 02: GROW (Highlighted / Core Engagement) -->
+<div class="p-8 bg-surface-container-high border-2 border-secondary rounded-2xl flex flex-col justify-between relative shadow-[0_0_40px_rgba(23,202,172,0.2)] lg:-translate-y-2">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-secondary text-on-secondary font-headline font-black text-xs uppercase tracking-widest rounded-full shadow-md whitespace-nowrap">
+CORE ENGAGEMENT
+</div>
+<div>
+<div class="flex items-center justify-between mb-4 mt-2">
+<span class="px-3 py-1 bg-secondary/20 rounded text-secondary font-headline font-bold text-xs uppercase tracking-wider">LEVEL 02</span>
+<span class="font-headline text-xs uppercase tracking-wider text-secondary" data-i18n="lvl2-badge">ACTION &amp; IMPROVEMENT</span>
+</div>
+<h3 class="font-headline font-black text-3xl uppercase tracking-tight text-on-surface mb-1">
+GROW
+</h3>
+<span class="font-headline font-semibold text-sm text-secondary uppercase tracking-widest block mb-4" data-i18n="lvl2-sub">Priority Implementation</span>
+<p class="font-body text-base text-on-surface mb-4 font-medium" data-i18n="lvl2-pos">
+“Turn the priorities into practical improvements.”
+</p>
+<p class="font-body text-sm text-on-surface-variant mb-6 pb-4 border-b border-outline-variant/30 leading-relaxed" data-i18n="lvl2-nature"><strong>Moving from diagnosis into action.</strong> Based on the audit findings, we implement the highest-priority solutions across Content, SEO, and/or AI Systems on a minimum three-month timeline. Scope is customized to your specific priorities rather than a generic, fixed deliverable list.</p>
+<div class="p-3 bg-surface-container/70 rounded-lg mb-6">
+<span class="font-body text-xs text-secondary/90 italic block" data-i18n="lvl2-note">
+* Tailored high-impact sprint executing validated priorities.
+</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/40">
+<a class="w-full block py-3 text-center bg-primary-container hover:bg-secondary text-on-primary-container hover:text-on-secondary font-headline font-bold text-xs uppercase tracking-widest rounded transition-all shadow-[0_0_18px_rgba(119,82,254,0.35)]" data-i18n="lvl2-btn" href="#contact" onclick="setFormPriority('grow')">
+Discuss Implementation →
+</a>
+</div>
+</div>
+<!-- LEVEL 03: SCALE -->
+<div class="p-8 bg-surface-container rounded-2xl border border-outline-variant/30 flex flex-col justify-between relative shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-surface-container-high rounded text-tertiary font-headline font-bold text-xs uppercase tracking-wider">LEVEL 03</span>
+<span class="font-headline text-xs uppercase tracking-wider text-outline" data-i18n="lvl3-badge">STRATEGIC PARTNERSHIP</span>
+</div>
+<h3 class="font-headline font-black text-3xl uppercase tracking-tight text-on-surface mb-1">
+SCALE
+</h3>
+<span class="font-headline font-semibold text-sm text-tertiary uppercase tracking-widest block mb-4" data-i18n="lvl3-sub">Long-Term System</span>
+<p class="font-body text-base text-on-surface mb-4 font-medium" data-i18n="lvl3-pos">
+“Build, improve and evolve the system over time.”
+</p>
+<p class="font-body text-sm text-on-surface-variant mb-6 pb-4 border-b border-outline-variant/20 leading-relaxed" data-i18n="lvl3-nature">
+Ongoing strategic partnership over a longer horizon. Establishing clear plans, milestones, and priorities across Content, SEO, and AI Systems that evolve with business needs and results.&nbsp;</p>
+<div class="p-3 bg-surface-container-high/60 rounded-lg mb-6">
+<span class="font-body text-xs text-outline italic block" data-i18n="lvl3-note">
+* Continuous evolution with structured milestone tracking.
+</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<a class="w-full block py-3 text-center bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-tertiary font-headline font-bold text-xs uppercase tracking-widest rounded transition-colors" data-i18n="lvl3-btn" href="#contact" onclick="setFormPriority('scale')">
+Explore Partnership →
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Consultation Banner -->
+<div class="p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h4 class="font-headline font-bold text-xl uppercase tracking-tight text-on-surface mb-1" data-i18n="sys-banner-title">Not sure which level is right for your business?</h4>
+<p class="font-body text-sm text-on-surface-variant" data-i18n="sys-banner-sub">Every business starts with an initial conversation to assess current maturity and immediate opportunities.</p>
+</div>
+<a class="shrink-0 px-6 py-3 bg-secondary hover:bg-secondary-container text-on-secondary font-headline font-bold text-xs uppercase tracking-widest rounded transition-colors shadow-[0_0_15px_rgba(23,202,172,0.3)]" data-i18n="sys-banner-btn" href="#contact">
+Let's talk about your business →
+</a>
+</div>
+</div>
+</section>
+<!-- 5. WHO WE HELP -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-surface-container-lowest border-y border-outline-variant/20" id="who-we-help">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="who-tag">Target Ecosystems</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none" data-i18n="who-title">
+WHO WE HELP.
+</h2>
+</div>
+<p class="font-body text-base md:text-lg text-on-surface-variant max-w-md font-light" data-i18n="who-sub">
+Positioned around small and growing businesses, especially local and regional service-based operations ready to scale.
+</p>
+</div>
+<!-- Segment Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-10">
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl">storefront</span>
+</div>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-2" data-i18n="seg1-title">
+Local &amp; Regional Service Businesses
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="seg1-desc">
+Restaurants, automotive dealerships, hospitality venues, and regional retailers needing sustained local search footfall and booking flow.
+</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/30 hover:border-primary/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">gavel</span>
+</div>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-2" data-i18n="seg2-title">
+Professional Practices
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="seg2-desc">
+Legal firms, specialized medical clinics, architectural studios, and accounting consultants building commercial authority and trust.
+</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/30 hover:border-tertiary/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary mb-4">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-2" data-i18n="seg3-title">
+B2B &amp; Specialized Contractors
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="seg3-desc">
+Commercial contractors, industrial equipment suppliers, logistics operators, and specialized technical vendors streamlining sales cycles.
+</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl">rocket_launch</span>
+</div>
+<h3 class="font-headline font-bold text-lg uppercase tracking-tight text-on-surface mb-2" data-i18n="seg4-title">
+Growing Independent Ventures
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="seg4-desc">
+Founder-led companies breaking through word-of-mouth reliance, regional saturation, and manual operational bottlenecks.
+</p>
+</div>
+</div>
+<!-- Context Note -->
+<div class="p-4 rounded-xl bg-surface-container-high/40 border border-outline-variant/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0">info</span>
+<p class="font-body text-sm text-on-surface-variant" data-i18n="who-note">
+Our systems adapt to any business where customer trust, search visibility, and operational efficiency drive revenue. We are not exclusive to these categories.
+</p>
+</div>
+</div>
+</section>
+<!-- 6. HOW WE WORK (Practical 4-Stage Cadence) -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-[#090414]" id="how-we-work">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="flow-tag">Operating Velocity</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none mb-3" data-i18n="flow-title">
+HOW WE WORK.
+</h2>
+<p class="font-body text-base md:text-lg text-on-surface-variant max-w-xl font-light" data-i18n="flow-sub">
+A frictionless cadence engineered for direct clarity, zero bloated check-ins, and rapid delivery.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Step 1 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 rounded-2xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="font-headline font-black text-4xl text-secondary block leading-none mb-3">01</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight text-on-surface mb-2" data-i18n="step1-title">
+UNDERSTAND
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="step1-desc">
+Deep diagnostic of current systems, positioning, customer journey, and operational bottlenecks.
+</p>
+</div>
+<div class="pt-6 mt-4">
+<span class="w-full h-1 bg-secondary block rounded-full"></span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 rounded-2xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="font-headline font-black text-4xl text-primary block leading-none mb-3">02</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight text-on-surface mb-2" data-i18n="step2-title">
+BUILD
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="step2-desc">
+Deploying high-impact priorities across content foundations, search architecture, or automation workflows.
+</p>
+</div>
+<div class="pt-6 mt-4">
+<span class="w-full h-1 bg-primary block rounded-full"></span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 rounded-2xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="font-headline font-black text-4xl text-tertiary block leading-none mb-3">03</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight text-on-surface mb-2" data-i18n="step3-title">
+LAUNCH
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="step3-desc">
+Activating tools, workflows, and targeted visibility assets with end-to-end quality control.
+</p>
+</div>
+<div class="pt-6 mt-4">
+<span class="w-full h-1 bg-tertiary block rounded-full"></span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 rounded-2xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="font-headline font-black text-4xl text-secondary block leading-none mb-3">04</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight text-on-surface mb-2" data-i18n="step4-title">
+IMPROVE
+</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed" data-i18n="step4-desc">
+Monitoring performance, refining automated pathways, and expanding organic reach over time.
+</p>
+</div>
+<div class="pt-6 mt-4">
+<span class="w-full h-1 bg-secondary block rounded-full"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. THE TEAM (Real 4-Member Specialist Team) -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-28 bg-surface-container-lowest border-y border-outline-variant/20" id="team">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary block mb-2" data-i18n="team-tag">Direct Founder Access</span>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tight text-on-surface leading-none mb-3" data-i18n="team-title">
+THE TEAM.
+</h2>
+<p class="font-body text-base text-on-surface-variant max-w-xl" data-i18n="team-sub">
+Small group of senior specialists working directly with clients. No junior account managers or multi-tiered corporate hand-offs.
+</p>
+</div>
+<span class="font-headline font-semibold text-xs tracking-widest uppercase text-outline">Partner Immersion</span>
+</div>
+<!-- 4 Team Members Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Member 1: KIKE -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-secondary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="relative mb-5 overflow-hidden rounded-2xl border border-secondary/40 shadow-[0_0_20px_rgba(23,202,172,0.2)] aspect-square"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdUoS9VRmCaZ7P2nixH36qyF1cYPvSpvMohV8x5PaaXqQQ4UtTx4pLffi3uxhJ6bus-KaB5b0xeevl8UTvRbpf3OAufnZwqRr5LwObNUOggy3OmvlDgJ8RGOAliuueOz21BE1iYuWBdwParQXJVdIdFle5CuzEbowbO7ASW-YzAoKiwvPjmUv4tE_J_YI5HF11Vesc5LxUHAI6zNRCITvoL_0N1NC0TEwa_4NYVvm-dm4eaosLHvSGBhVvyA0cs5XCtQ" alt="Kike - Automation &amp; Integration Specialist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
+<span class="font-headline font-bold text-[11px] uppercase tracking-widest text-secondary text-center block mb-1" data-i18n="kike-role">Automation &amp; Integration Engineer Specialist</span>
+<h3 class="font-headline font-black text-2xl text-on-surface text-center mb-4">KIKE</h3>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed text-left" data-i18n="kike-bio">
+Hands-on technical specialist experienced in configuring cloud and SaaS solutions, troubleshooting systems, integrating APIs, automating workflows, and supporting customers remotely. He works across software, networking, Linux-based environments, IoT devices and business process automation, combining practical problem-solving with clear communication and reliable follow-through.
+</p>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/20 text-center">
+<span class="font-headline text-[10px] uppercase tracking-widest text-outline">Specialist · Systems</span>
+</div>
+</div>
+<!-- Member 2: MIKEY -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-primary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="relative mb-5 overflow-hidden rounded-2xl border border-primary/40 shadow-[0_0_20px_rgba(203,190,255,0.2)] aspect-square"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdA_apiUGP3opwTF75GF-mhgll9ejfG_W-AdQfrH1Wv_1UeD6R0OV4TqbTq3Veyaopp-ZbZBY7jh3Jyx1rIQjMy2KvtGVcMcYZUFdJ1EvV-UQGY4pvdBdN7GTdN4ycp-0kbiwx9hy1rNvS66h_RzEsU-LBnHOav1IsRb2fVsroEPHTZyywYZVIY6NM8knpxMHAOGj7sejAyz8GBRa2FepkPqwM7D-JBgT_xEjJE_ZmgWPzehBkv-_Boo84Sb6gF3pIzw" alt="Mikey - Senior SEO Strategist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
+<span class="font-headline font-bold text-[11px] uppercase tracking-widest text-primary text-center block mb-1" data-i18n="mikey-role">Senior SEO Strategist</span>
+<h3 class="font-headline font-black text-2xl text-on-surface text-center mb-4">MIKEY</h3>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed text-left" data-i18n="mikey-bio">
+SEO Product Owner with 6+ years of experience leading technical SEO, content strategy and organic growth initiatives for international companies. Experienced in SEO roadmaps, technical audits, analytics, international SEO and content strategy, while collaborating with engineering and product teams across multiple European markets. He translates business goals into practical SEO strategies and measurable organic growth initiatives.
+</p>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/20 text-center">
+<span class="font-headline text-[10px] uppercase tracking-widest text-outline">Specialist · SEO</span>
+</div>
+</div>
+<!-- Member 3: DIEGO -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-tertiary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="relative mb-5 overflow-hidden rounded-2xl border border-tertiary/40 shadow-[0_0_20px_rgba(0,226,145,0.2)] aspect-square"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7NAM2LJLW0AIcul_IqwV5ka16sSGdL9bhDQB3XlorUCY5j88KIPZbpTI0iAcyckqvKCrqAaZ0U6PtyksfyS92knvhFE4m0T6v-D7nUftGaxgJxPkFoVYPzTTeFkAo2XvRbHdwAQhxz7x1RKOdM3zXJqD9HH_ZZhpQ92L4MRPANxXV-HDJQwhd9zU4GinP3GOkJ9ssde7SCHWHNhEPPhUZjVWCk_vu_KgrTk2MlTwufGypVBMK8r8kYnwavNEbbt4DcQ" alt="Diego - Content &amp; Communications Specialist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
+<span class="font-headline font-bold text-[11px] uppercase tracking-widest text-tertiary text-center block mb-1" data-i18n="diego-role">Content &amp; Communications Specialist</span>
+<h3 class="font-headline font-black text-2xl text-on-surface text-center mb-4">DIEGO</h3>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed text-left" data-i18n="diego-bio">
+Strategic communicator with more than 10 years of experience leading corporate communications, digital strategy and content initiatives across multicultural and international environments. With a background in journalism and editing, he brings strong narrative judgment to brand messaging, executive communications and digital content. He has led multidisciplinary and remote teams, coordinated regional and global stakeholders, and managed content from strategy and ideation through production, publishing and quality control.
+</p>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/20 text-center">
+<span class="font-headline text-[10px] uppercase tracking-widest text-outline">Specialist · Communications</span>
+</div>
+</div>
+<!-- Member 4: FLAVI -->
+<div class="p-6 md:p-8 bg-surface-container rounded-2xl border border-outline-variant/30 hover:border-secondary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="relative mb-5 overflow-hidden rounded-2xl border border-secondary/40 shadow-[0_0_20px_rgba(23,202,172,0.2)] aspect-square"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcpq5ZYSJZHOQ6VSDcP5egUJ6EHZUkKBoLzcyE8Vi-_ZOPSiCrN1LscXJMxaIt4ln9UZfj9c7piNXMl5lz6x3tPGfH6OGEOwd1NOIHD4KNs0ZlAzE5n4GjLkixmIww-GMX6Tl-5zC84jQe4wpqFJL6vREEKdWQtJNtBMxRwXn1bz9JJ_bVvbJqW0o3y4lkAma-1dWC0T5ovPrYh65l_APk5lZNBoP002cxYw3I9pQw7X3GyZpxXqtIC6V1KSppr3QWPA" alt="Flavi - Digital Content Specialist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></div>
+<span class="font-headline font-bold text-[11px] uppercase tracking-widest text-secondary text-center block mb-1" data-i18n="flavi-role">Digital Content Specialist</span>
+<h3 class="font-headline font-black text-2xl text-on-surface text-center mb-4">FLAVI</h3>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed text-left" data-i18n="flavi-bio">
+Content strategist and communications specialist experienced in managing end-to-end digital publishing workflows across websites, CMS platforms and social channels. She has extensive hands-on experience with WordPress and Elementor, web content updates, editorial calendars, content QA, email marketing and digital asset coordination. She combines strategic messaging with careful execution, ensuring content is accurately formatted, visually consistent, functional and ready for each digital platform.
+</p>
+</div>
+<div class="pt-4 mt-6 border-t border-outline-variant/20 text-center">
+<span class="font-headline text-[10px] uppercase tracking-widest text-outline">Specialist · Content Operations</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CONTACT / PROPOSALS -->
+<section class="relative w-full px-margin-mobile md:px-margin py-20 md:py-32 bg-[#090414]" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="p-8 md:p-16 bg-surface-container rounded-3xl border border-outline-variant/30 shadow-2xl relative overflow-hidden">
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Copy -->
+<div class="lg:col-span-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary" data-i18n="cta-badge">Consultation &amp; Proposal</span>
+</div>
+<h2 class="font-headline font-black text-3xl sm:text-5xl uppercase tracking-tighter text-on-surface leading-tight mb-4" data-i18n="contact-headline">
+TELL US WHAT YOU'RE WORKING ON.
+</h2>
+<p class="font-body text-base md:text-lg text-on-surface-variant max-w-lg mb-8" data-i18n="contact-sub">
+Let's talk about what your business needs. Every business is different. Tell us where you are, what you're trying to achieve and where things feel stuck. We'll take it from there.
+</p>
+<div class="space-y-4 pt-2">
+<div>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1" data-i18n="label-direct">Direct Operational Contact</span>
+<a class="font-headline font-bold text-2xl text-secondary hover:text-primary transition-colors tracking-tight" href="mailto:hello@pistachostudio.com">hello@pistachostudio.com</a>
+</div>
+<div>
+<span class="font-headline text-xs uppercase tracking-widest text-outline block" data-i18n="location">SPAIN + LATAM · Global Remote Operations</span>
+</div>
+</div>
+</div>
+<!-- Right Form -->
+<div class="lg:col-span-6 mt-8 lg:mt-0">
+<form class="p-6 md:p-8 bg-surface-container-low border border-outline-variant/40 rounded-2xl shadow-xl flex flex-col gap-4" id="inquiry-form" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.reset();">
+<div>
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1.5" data-i18n="form-name">Full Name / Company</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-highest/80 border border-outline-variant/50 text-on-surface placeholder:text-outline/60 font-body text-sm focus:outline-none focus:border-secondary transition-colors rounded" placeholder="Alexander Vance, Apex Group" required="" type="text">
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1.5" data-i18n="form-email">Work Email</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-highest/80 border border-outline-variant/50 text-on-surface placeholder:text-outline/60 font-body text-sm focus:outline-none focus:border-secondary transition-colors rounded" placeholder="alexander@apexgroup.com" required="" type="email">
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1.5" data-i18n="form-type">Business Type / Industry</label>
+<select class="w-full px-4 py-2.5 bg-surface-container-highest/80 border border-outline-variant/50 text-on-surface font-body text-sm focus:outline-none focus:border-secondary transition-colors rounded">
+<option data-i18n="opt-local" value="local">Local Service (Hospitality, Clinic, Specialist)</option>
+<option data-i18n="opt-prof" value="prof">Professional Practice (Legal, Medical, Architecture, Accounting)</option>
+<option data-i18n="opt-b2b" value="b2b">B2B / Specialized Contractor / Industrial</option>
+<option data-i18n="opt-venture" value="venture">Growing Independent Venture</option>
+<option data-i18n="opt-other" value="other">Other Business Type</option>
+</select>
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1.5" data-i18n="form-help">How Can We Help?</label>
+<select class="w-full px-4 py-2.5 bg-surface-container-highest/80 border border-outline-variant/50 text-on-surface font-body text-sm focus:outline-none focus:border-secondary transition-colors rounded" id="priority-select">
+<option data-i18n="opt-start" value="start">Start — Audit &amp; Strategy</option>
+<option data-i18n="opt-grow" value="grow">Grow — Priority Implementation</option>
+<option data-i18n="opt-scale" value="scale">Scale — Long-Term System</option>
+<option data-i18n="opt-convo" value="convo">General Initial Conversation</option>
+</select>
+</div>
+<div>
+<label class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1.5" data-i18n="form-msg-label">Where are things stuck or what are you looking to improve?</label>
+<textarea class="w-full px-4 py-2.5 bg-surface-container-highest/80 border border-outline-variant/50 text-on-surface placeholder:text-outline/60 font-body text-sm focus:outline-none focus:border-secondary transition-colors rounded resize-none" data-i18n-placeholder="form-msg-placeholder" placeholder="Tell us briefly about your current setup, goals or challenges..." rows="3"></textarea>
+</div>
+<button class="w-full py-3.5 bg-primary-container hover:bg-secondary text-on-primary-container hover:text-on-secondary font-headline font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_24px_rgba(119,82,254,0.35)] rounded mt-2" data-i18n="form-btn" type="submit">
+Start a conversation →
+</button>
+<div class="hidden p-3 bg-surface-container-high text-secondary border border-secondary/30 font-headline font-bold text-xs uppercase tracking-wider text-center rounded" data-i18n="form-ok" id="form-success">
+Inquiry received. A senior specialist will review your details directly.
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- 9. FOOTER -->
+<footer class="w-full bg-[#06020e] border-t border-outline-variant/20 text-on-surface-variant">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-14">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12">
+<div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+<div class="flex items-center gap-3">
+<img alt="Pistacho Studio Logo" class="w-8 h-8 object-contain filter drop-shadow-[0_0_8px_rgba(23,202,172,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA4z0Odv1d3aVooV8RW6Q4Doe1hkZ-nA1SSWm4xX9TO9vZaoR9aM6sD06PptN4_Nut_EDbbtJ9WoItKUrFgjqIqYv4lIAHILSaccL7fnOylSFXc8ZkQUa6NmAmB9zvOr9W63SXQMA7hNVV6aXTAu488LkNNNFkJSjrWjs2Okt0m-DWQHkaDD-r-riATKXyO4e7ZQxEw8x7DV05b9WGDruWWIEP6frLnChHMeqgIeJV7QIoAxYT2lkvYCrCR9o8E8jVWQ">
+<span class="font-headline font-black text-2xl tracking-tight text-on-surface">PISTACHO STUDIO</span>
+</div>
+<p class="font-headline font-bold text-sm tracking-wider uppercase text-secondary">
+CONTENT · SEO · AI SYSTEMS — FIND · TRUST · GROW.
+</p>
+<p class="font-body text-sm text-outline max-w-lg" data-i18n="footer-desc">
+Making small and growing businesses easier to find, trust and grow through Content, SEO, and AI Systems.
+</p>
+<div>
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-outline block mb-1" data-i18n="footer-direct">Direct Inquiries</span>
+<a class="font-headline font-bold text-lg text-secondary hover:text-primary transition-colors tracking-tight" href="mailto:hello@pistachostudio.com">hello@pistachostudio.com</a>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between pt-6 lg:pt-0">
+<div class="grid grid-cols-2 gap-gutter">
+<div class="space-y-2">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-outline block" data-i18n="footer-nav">Navigation</span>
+<ul class="space-y-2 font-body text-sm">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-what" href="#what-we-do">What We Do</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-story" href="#story">Story &amp; Code</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-system" href="#system">The System</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-who" href="#who-we-help">Who We Help</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-how" href="#how-we-work">How We Work</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-team" href="#team">Team</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors" data-i18n="nav-contact" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="p-6 bg-surface-container/60 border border-outline-variant/30 rounded-xl flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline font-bold text-xs uppercase tracking-wider text-secondary">Zero Layers</span>
+</div>
+<p class="font-body text-xs text-outline" data-i18n="footer-pill">
+Direct partnership with senior specialists. Execution without corporate agency bureaucracy.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant">
+<span class="font-headline font-medium text-xs tracking-wider text-outline">
+© 2026 PISTACHO STUDIO. ALL RIGHTS RESERVED.
+</span>
+<div class="flex items-center gap-6">
+<span class="font-headline font-bold text-xs uppercase tracking-widest text-secondary">FIND · TRUST · GROW</span>
+<span class="font-headline font-medium text-xs uppercase tracking-widest text-outline">GLOBAL REMOTE OPERATIONS</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- 10. BILINGUAL JAVASCRIPT ENGINE & HELPERS -->
+<script>
+    const translations = {
+      en: {
+        "nav-what": "What We Do",
+        "nav-story": "Story",
+        "nav-system": "The System",
+        "nav-who": "Who We Help",
+        "nav-how": "How We Work",
+        "nav-team": "Team",
+        "nav-contact": "Contact",
+        "cta-talk": "Let's Talk",
+        "hero-badge": "2026 STUDIO STRATEGY · DIGITAL SYSTEMS",
+        "hero-triad": "CONTENT · SEO · AI SYSTEMS",
+        "hero-headline": "MAKE YOUR BUSINESS EASIER TO <span class=\"text-secondary underline decoration-primary-container/40 decoration-wavy underline-offset-8\">FIND</span>, <span class=\"text-primary\">TRUST</span> AND <span class=\"text-tertiary\">GROW</span>.",
+        "hero-sub": "Focused digital studio helping small and growing businesses build consistent visibility, commercial authority, and smart automated operations.",
+        "hero-cta-system": "Explore The System",
+        "hero-cta-convo": "Start a Conversation →",
+        "hero-card-seo": "Be discoverable when potential customers are actively searching.",
+        "hero-card-content": "Build clear, useful and consistent digital presence and authority.",
+        "hero-card-ai": "Automate repetitive work, capture opportunities and build smarter workflows.",
+        "ticker": "FIND · TRUST · GROW · SEO ARCHITECTURE · AUTHORITY CONTENT SYSTEMS · AI AUTOMATION WORKFLOWS · NO BLOATED AGENCY HOURS · DIRECT SENIOR EXECUTION",
+        "what-tag": "Core Disciplines",
+        "what-title": "WHAT WE DO.",
+        "what-sub": "Three concise disciplines engineered into a unified growth engine.",
+        "card-content-title": "CONTENT",
+        "card-content-desc": "Build a clear, useful and consistent digital presence. Finding ideas worth sharing, shaping them into meaningful stories, and connecting them to commercial goals.",
+        "card-content-core": "Key Focus Areas",
+        "c-pt-1": "High-clarity messaging & brand blueprint",
+        "c-pt-2": "Customer-facing website copy & commercial framing",
+        "c-pt-3": "Structured authority content & authentic social proof",
+        "c-pt-4": "Creative direction designed for genuine audience trust",
+        "card-seo-title": "SEO",
+        "card-seo-desc": "Help businesses become discoverable when potential customers are actively searching for them. Technical site architecture, local search map dominance, high-intent visibility, and organic growth.",
+        "card-seo-core": "Key Focus Areas",
+        "s-pt-1": "High-intent local & regional search architecture",
+        "s-pt-2": "Google Business Profile optimization & map dominance",
+        "s-pt-3": "Technical indexing, web speed & site architecture hygiene",
+        "s-pt-4": "Search intent keyword clusters & conversion ranking",
+        "card-ai-title": "AI SYSTEMS",
+        "card-ai-desc": "Automate repetitive work, capture opportunities, and build smarter business workflows. Streamlined customer intake, automated routing, and operational tools.",
+        "card-ai-core": "Key Focus Areas",
+        "a-pt-1": "Inbound inquiry capture & automatic lead qualification",
+        "a-pt-2": "Automated customer follow-ups & scheduling pathways",
+        "a-pt-3": "Operational task automation & internal tool hand-offs",
+        "a-pt-4": "Integrated CRM pipelines & real-time business alerts",
+        "story-tag": "Our Background & Ethos",
+        "story-title": "WHY WE DITCHED THE CORPORATE MACHINE.",
+        "proof-1": "Years of Experience",
+        "proof-2": "Unnecessary Layers",
+        "proof-3": "Partner Attention",
+        "story-text-1": "Pistacho Studio was born when four colleagues, after years working across corporate communications and IT environments, decided there had to be a more direct, honest and enjoyable way to do great work.",
+        "story-text-2": "We've seen what works, what doesn't, and how easily complexity can get in the way of good ideas. We prefer working directly with people who care about their businesses, understanding the real problem and taking the most efficient path to solving it.",
+        "code-heading": "OUR CODE: CONTENT, SEO & AI SYSTEMS",
+        "code-1-title": "STRATEGY GIVES CONTENT A PURPOSE.",
+        "code-1-desc": "We don't create content just to fill a feed. We find the ideas worth sharing, shape them into meaningful stories and connect them to real business goals.",
+        "code-2-title": "DETAILS MAKE THE DIFFERENCE.",
+        "code-2-desc": "From a headline to a search strategy, from a landing page to an automated workflow, we care about the details that make digital work clearer, sharper and more effective.",
+        "code-3-title": "EVERY BUSINESS HAS SOMETHING WORTH SAYING.",
+        "code-3-desc": "We look beyond the surface to find what makes a business valuable, relevant and different — then turn that insight into content, visibility and growth.",
+        "code-4-title": "GOOD WORK SHOULD MAKE THINGS SIMPLER.",
+        "code-4-desc": "We bring content, SEO and AI systems together to help businesses communicate better, get discovered and work smarter — without unnecessary complexity.",
+        "sys-tag": "Consultative Progression",
+        "sys-title": "THE PISTACHO SYSTEM.",
+        "sys-sub": "A connected, progressive model tailored to your business needs. We start by diagnosing where you are, then move into priority action and long-term partnership.",
+        "prog-1": "Audit → Understand",
+        "prog-2": "Implement → Improve",
+        "prog-3": "Build → Evolve",
+        "lvl1-badge": "DIAGNOSIS & ROADMAP",
+        "lvl1-sub": "Audit & Strategy",
+        "lvl1-pos": "“Understand where you are. Know what to fix. Get a clear roadmap.”",
+        "lvl1-nature": "Consulting and diagnostic engagement across Content, SEO, and AI Systems. We analyze what is working, what is not, where the biggest opportunities lie, and what to prioritize.",
+        "lvl1-note": "* A diagnostic audit providing strategic recommendations without execution at this stage.",
+        "lvl1-btn": "Request an Audit →",
+        "lvl2-badge": "ACTION & IMPROVEMENT",
+        "lvl2-sub": "Priority Implementation",
+        "lvl2-pos": "“Turn the priorities into practical improvements.”",
+        "lvl2-nature": "Moving from diagnosis into action. Based on audit findings, we implement the highest-priority solutions across Content, SEO, and/or AI Systems. Scope is customized to your specific priorities rather than a generic fixed deliverable list.",
+        "lvl2-note": "* Tailored high-impact sprint executing validated priorities.",
+        "lvl2-btn": "Discuss Implementation →",
+        "lvl3-badge": "STRATEGIC PARTNERSHIP",
+        "lvl3-sub": "Long-Term System",
+        "lvl3-pos": "“Build, improve and evolve the system over time.”",
+        "lvl3-nature": "Ongoing strategic partnership over a longer horizon. Establishing clear plans, milestones, and priorities across Content, SEO, and AI Systems that evolve with business needs and results. Not an ambiguous retainer.",
+        "lvl3-note": "* Continuous evolution with structured milestone tracking.",
+        "lvl3-btn": "Explore Partnership →",
+        "sys-banner-title": "Not sure which level is right for your business?",
+        "sys-banner-sub": "Every business starts with an initial conversation to assess current maturity and immediate opportunities.",
+        "sys-banner-btn": "Let's talk about your business →",
+        "who-tag": "Target Ecosystems",
+        "who-title": "WHO WE HELP.",
+        "who-sub": "Positioned around small and growing businesses, especially local and regional service-based operations ready to scale.",
+        "seg1-title": "Local & Regional Service Businesses",
+        "seg1-desc": "Restaurants, automotive dealerships, hospitality venues, and regional retailers needing sustained local search footfall and booking flow.",
+        "seg2-title": "Professional Practices",
+        "seg2-desc": "Legal firms, specialized medical clinics, architectural studios, and accounting consultants building commercial authority and trust.",
+        "seg3-title": "B2B & Specialized Contractors",
+        "seg3-desc": "Commercial contractors, industrial equipment suppliers, logistics operators, and specialized technical vendors streamlining sales cycles.",
+        "seg4-title": "Growing Independent Ventures",
+        "seg4-desc": "Founder-led companies breaking through word-of-mouth reliance, regional saturation, and manual operational bottlenecks.",
+        "who-note": "Our systems adapt to any business where customer trust, search visibility, and operational efficiency drive revenue. We are not exclusive to these categories.",
+        "flow-tag": "Operating Velocity",
+        "flow-title": "HOW WE WORK.",
+        "flow-sub": "A frictionless cadence engineered for direct clarity, zero bloated check-ins, and rapid delivery.",
+        "step1-title": "UNDERSTAND",
+        "step1-desc": "Deep diagnostic of current systems, positioning, customer journey, and operational bottlenecks.",
+        "step2-title": "BUILD",
+        "step2-desc": "Deploying high-impact priorities across content foundations, search architecture, or automation workflows.",
+        "step3-title": "LAUNCH",
+        "step3-desc": "Activating tools, workflows, and targeted visibility assets with end-to-end quality control.",
+        "step4-title": "IMPROVE",
+        "step4-desc": "Monitoring performance, refining automated pathways, and expanding organic reach over time.",
+        "team-tag": "Direct Founder Access",
+        "team-title": "THE TEAM.",
+        "team-sub": "Small group of senior specialists working directly with clients. No junior account managers or multi-tiered corporate hand-offs.",
+        "kike-role": "Automation & Integration Engineer Specialist",
+        "kike-bio": "Hands-on technical specialist experienced in configuring cloud and SaaS solutions, troubleshooting systems, integrating APIs, automating workflows, and supporting customers remotely. He works across software, networking, Linux-based environments, IoT devices and business process automation, combining practical problem-solving with clear communication and reliable follow-through.",
+        "mikey-role": "Senior SEO Strategist",
+        "mikey-bio": "SEO Product Owner with 6+ years of experience leading technical SEO, content strategy and organic growth initiatives for international companies. Experienced in SEO roadmaps, technical audits, analytics, international SEO and content strategy, while collaborating with engineering and product teams across multiple European markets. He translates business goals into practical SEO strategies and measurable organic growth initiatives.",
+        "diego-role": "Content & Communications Specialist",
+        "diego-bio": "Strategic communicator with more than 10 years of experience leading corporate communications, digital strategy and content initiatives across multicultural and international environments. With a background in journalism and editing, he brings strong narrative judgment to brand messaging, executive communications and digital content. He has led multidisciplinary and remote teams, coordinated regional and global stakeholders, and managed content from strategy and ideation through production, publishing and quality control.",
+        "flavi-role": "Digital Content Specialist",
+        "flavi-bio": "Content strategist and communications specialist experienced in managing end-to-end digital publishing workflows across websites, CMS platforms and social channels. She has extensive hands-on experience with WordPress and Elementor, web content updates, editorial calendars, content QA, email marketing and digital asset coordination. She combines strategic messaging with careful execution, ensuring content is accurately formatted, visually consistent, functional and ready for each digital platform.",
+        "cta-badge": "Consultation & Proposal",
+        "contact-headline": "TELL US WHAT YOU'RE WORKING ON.",
+        "contact-sub": "Let's talk about what your business needs. Every business is different. Tell us where you are, what you're trying to achieve and where things feel stuck. We'll take it from there.",
+        "label-direct": "Direct Operational Contact",
+        "location": "London · Global Remote Operations",
+        "form-name": "Full Name / Company",
+        "form-email": "Work Email",
+        "form-type": "Business Type / Industry",
+        "opt-local": "Local Service (Hospitality, Clinic, Specialist)",
+        "opt-prof": "Professional Practice (Legal, Medical, Architecture, Accounting)",
+        "opt-b2b": "B2B / Specialized Contractor / Industrial",
+        "opt-venture": "Growing Independent Venture",
+        "opt-other": "Other Business Type",
+        "form-help": "How Can We Help?",
+        "opt-start": "Start — Audit & Strategy",
+        "opt-grow": "Grow — Priority Implementation",
+        "opt-scale": "Scale — Long-Term System",
+        "opt-convo": "General Initial Conversation",
+        "form-msg-label": "Where are things stuck or what are you looking to improve?",
+        "form-msg-placeholder": "Tell us briefly about your current setup, goals or challenges...",
+        "form-btn": "Start a conversation →",
+        "form-ok": "Inquiry received. A senior specialist will review your details directly.",
+        "footer-desc": "Making small and growing businesses easier to find, trust and grow through Content, SEO, and AI Systems.",
+        "footer-direct": "Direct Inquiries",
+        "footer-nav": "Navigation",
+        "footer-pill": "Direct partnership with senior specialists. Execution without corporate agency bureaucracy."
+      },
+      es: {
+        "nav-what": "Lo Que Hacemos",
+        "nav-story": "Historia",
+        "nav-system": "El Sistema",
+        "nav-who": "A Quién Ayudamos",
+        "nav-how": "Cómo Trabajamos",
+        "nav-team": "Equipo",
+        "nav-contact": "Contacto",
+        "cta-talk": "Hablemos",
+        "hero-badge": "ESTRATEGIA 2026 · SISTEMAS DIGITALES",
+        "hero-triad": "CONTENIDO · SEO · SISTEMAS DE IA",
+        "hero-headline": "HAZ QUE TU NEGOCIO SEA MÁS FÁCIL DE <span class=\"text-secondary underline decoration-primary-container/40 decoration-wavy underline-offset-8\">ENCONTRAR</span>, <span class=\"text-primary\">CONFIAR</span> Y <span class=\"text-tertiary\">CRECER</span>.",
+        "hero-sub": "Estudio digital enfocado en ayudar a negocios pequeños y en crecimiento a construir visibilidad constante, autoridad comercial y operaciones automatizadas inteligentes.",
+        "hero-cta-system": "Explorar El Sistema",
+        "hero-cta-convo": "Iniciar Conversación →",
+        "hero-card-seo": "Sé visible cuando clientes potenciales están buscando activamente.",
+        "hero-card-content": "Construye una presencia digital clara, útil, consistente y con autoridad.",
+        "hero-card-ai": "Automatiza tareas repetitivas, captura oportunidades y construye flujos de trabajo inteligentes.",
+        "ticker": "ENCONTRAR · CONFIAR · CRECER · ARQUITECTURA SEO · SISTEMAS DE CONTENIDO DE AUTORIDAD · AUTOMATIZACIÓN CON IA · CERO HORAS INFLADAS · EJECUCIÓN SENIOR DIRECTA",
+        "what-tag": "Disciplinas Centrales",
+        "what-title": "LO QUE HACEMOS.",
+        "what-sub": "Tres disciplinas concisas integradas en un solo motor de crecimiento.",
+        "card-content-title": "CONTENIDO",
+        "card-content-desc": "Construye una presencia digital clara, útil y consistente. Encontrar ideas que vale la pena compartir, darles forma en narrativas significativas y conectarlas con metas comerciales.",
+        "card-content-core": "Áreas de Enfoque",
+        "c-pt-1": "Mensajes de alta claridad y mapa de marca",
+        "c-pt-2": "Redacción comercial orientada al cliente y propuesta de valor",
+        "c-pt-3": "Sistemas de contenido estructurado y prueba social verídica",
+        "c-pt-4": "Dirección creativa pensada para construir confianza real",
+        "card-seo-title": "SEO",
+        "card-seo-desc": "Ayuda a que los negocios sean descubiertos cuando clientes potenciales buscan activamente. Arquitectura técnica, dominio de mapas locales, visibilidad de alta intención y crecimiento orgánico.",
+        "card-seo-core": "Áreas de Enfoque",
+        "s-pt-1": "Arquitectura de búsqueda local y regional de alta intención",
+        "s-pt-2": "Optimización de Google Business Profile y posicionamiento en mapas",
+        "s-pt-3": "Indexación técnica, velocidad web e higiene de arquitectura",
+        "s-pt-4": "Grupos semánticos de intención y posicionamiento transaccional",
+        "card-ai-title": "SISTEMAS DE IA",
+        "card-ai-desc": "Automatiza trabajo repetitivo, captura oportunidades y construye flujos de trabajo más inteligentes. Captación ágil de clientes, enrutamiento automático y herramientas operativas.",
+        "card-ai-core": "Áreas de Enfoque",
+        "a-pt-1": "Captura de consultas entrantes y calificación automática de leads",
+        "a-pt-2": "Seguimiento automático a prospectos y agendamiento sin fricciones",
+        "a-pt-3": "Automatización de tareas operativas y conexión entre herramientas",
+        "a-pt-4": "Pipelines de CRM integrados y alertas de negocio en tiempo real",
+        "story-tag": "Nuestra Historia y Filosofía",
+        "story-title": "POR QUÉ DEJAMOS LA MÁQUINA CORPORATIVA.",
+        "proof-1": "Años de Experiencia",
+        "proof-2": "Capas Innecesarias",
+        "proof-3": "Atención Directa",
+        "story-text-1": "Pistacho Studio nació cuando cuatro colegas, tras años trabajando en entornos de comunicaciones corporativas y tecnología, decidieron que debía existir una forma más directa, honesta y disfrutable de hacer un gran trabajo.",
+        "story-text-2": "Hemos visto lo que funciona, lo que no, y lo fácil que la complejidad puede estropear las buenas ideas. Preferimos trabajar directamente con personas a quienes les importa su negocio, comprendiendo el problema real y tomando la ruta más eficiente para resolverlo.",
+        "code-heading": "NUESTRO CÓDIGO: CONTENIDO, SEO Y SISTEMAS DE IA",
+        "code-1-title": "LA ESTRATEGIA LE DA PROPÓSITO AL CONTENIDO.",
+        "code-1-desc": "No creamos contenido solo para llenar un feed. Encontramos las ideas que vale la pena compartir, les damos forma en historias significativas y las conectamos con metas reales de negocio.",
+        "code-2-title": "LOS DETALLES MARCAN LA DIFERENCIA.",
+        "code-2-desc": "Desde un titular hasta una estrategia de búsqueda, desde una página de aterrizaje hasta un flujo automatizado, cuidamos los detalles que hacen que el trabajo digital sea más claro, afilado y efectivo.",
+        "code-3-title": "TODO NEGOCIO TIENE ALGO DIGNO DE DECIRSE.",
+        "code-3-desc": "Miramos más allá de la superficie para encontrar lo que hace a un negocio valioso, relevante y diferente — y convertimos esa visión en contenido, visibilidad y crecimiento.",
+        "code-4-title": "EL BUEN TRABAJO DEBE HACER LAS COSAS MÁS SIMPLES.",
+        "code-4-desc": "Unimos contenido, SEO y sistemas de IA para ayudar a las empresas a comunicarse mejor, ser descubiertas y trabajar con mayor agilidad — sin complejidades innecesarias.",
+        "sys-tag": "Progresión Consultiva",
+        "sys-title": "EL SISTEMA PISTACHO.",
+        "sys-sub": "Un modelo conectado y progresivo adaptado a las necesidades de tu empresa. Comenzamos diagnosticando tu estado actual, avanzamos hacia la acción prioritaria y construimos una alianza a largo plazo.",
+        "prog-1": "Auditoría → Entender",
+        "prog-2": "Implementar → Mejorar",
+        "prog-3": "Construir → Evolucionar",
+        "lvl1-badge": "DIAGNÓSTICO Y RUTA",
+        "lvl1-sub": "Auditoría y Estrategia",
+        "lvl1-pos": "“Entiende dónde estás. Sabe qué corregir. Obtén una hoja de ruta clara.”",
+        "lvl1-nature": "Diagnóstico y consultoría en Contenido, SEO y Sistemas de IA. Analizamos qué funciona, qué no, dónde están las mayores oportunidades y qué priorizar.",
+        "lvl1-note": "* Una auditoría diagnóstica con recomendaciones estratégicas sin ejecución en esta etapa.",
+        "lvl1-btn": "Solicitar Auditoría →",
+        "lvl2-badge": "ACCIÓN Y MEJORA",
+        "lvl2-sub": "Implementación Prioritaria",
+        "lvl2-pos": "“Convierte las prioridades en mejoras prácticas.”",
+        "lvl2-nature": "Pasamos del diagnóstico a la acción. Con base en la auditoría, implementamos las soluciones de mayor impacto en Contenido, SEO y/o Sistemas de IA según tus prioridades reales.",
+        "lvl2-note": "* Sprint personalizado de alto impacto ejecutando prioridades validadas.",
+        "lvl2-btn": "Conversar Implementación →",
+        "lvl3-badge": "ALIANZA ESTRATÉGICA",
+        "lvl3-sub": "Sistema a Largo Plazo",
+        "lvl3-pos": "“Construye, mejora y evoluciona el sistema con el tiempo.”",
+        "lvl3-nature": "Alianza estratégica continua con planes y metas claras en Contenido, SEO y Sistemas de IA que evolucionan con las necesidades del negocio. No una cuota mensual ambigua.",
+        "lvl3-note": "* Evolución continua con seguimiento estructurado por hitos.",
+        "lvl3-btn": "Explorar Alianza →",
+        "sys-banner-title": "¿No estás seguro de qué nivel es el adecuado?",
+        "sys-banner-sub": "Cada proyecto comienza con una conversación inicial para evaluar la madurez actual y las oportunidades inmediatas.",
+        "sys-banner-btn": "Hablemos de tu negocio →",
+        "who-tag": "Ecosistemas Objetivo",
+        "who-title": "A QUIÉN AYUDAMOS.",
+        "who-sub": "Diseñado para empresas pequeñas y en crecimiento, en especial negocios de servicios locales y regionales listos para escalar.",
+        "seg1-title": "Negocios de Servicios Locales y Regionales",
+        "seg1-desc": "Restaurantes, concesionarios, hostelería y comercios regionales que necesitan afluencia continua y reservas activas.",
+        "seg2-title": "Prácticas Profesionales",
+        "seg2-desc": "Despachos legales, clínicas especializadas, estudios de arquitectura y firmas contables consolidando autoridad comercial.",
+        "seg3-title": "B2B y Contratistas Especializados",
+        "seg3-desc": "Contratistas comerciales, proveedores de equipo industrial, empresas de logística y firmas técnicas agilizando sus ventas.",
+        "seg4-title": "Empresas Independientes en Expansión",
+        "seg4-desc": "Negocios liderados por fundadores que superan la dependencia del boca a boca y eliminan cuellos de botella manuales.",
+        "who-note": "Nuestros sistemas se adaptan a cualquier negocio donde la confianza, el SEO y la eficiencia operativa generen ingresos. No somos exclusivos de estos ejemplos.",
+        "flow-tag": "Velocidad Operativa",
+        "flow-title": "CÓMO TRABAJAMOS.",
+        "flow-sub": "Un proceso ágil diseñado para claridad directa, sin reuniones vacías y con entregas de impacto.",
+        "step1-title": "ENTENDER",
+        "step1-desc": "Diagnóstico profundo de sistemas actuales, posicionamiento, recorrido del cliente y fricciones.",
+        "step2-title": "CONSTRUIR",
+        "step2-desc": "Implementación de prioridades de alto impacto en contenido, arquitectura de búsqueda o automatización.",
+        "step3-title": "LANZAR",
+        "step3-desc": "Activación de herramientas, flujos y activos de visibilidad con control de calidad riguroso.",
+        "step4-title": "MEJORAR",
+        "step4-desc": "Monitoreo del desempeño, refinamiento de flujos automáticos y expansión del alcance orgánico.",
+        "team-tag": "Contacto Directo con Especialistas",
+        "team-title": "EL EQUIPO.",
+        "team-sub": "Grupo compacto de especialistas senior trabajando directamente contigo. Sin ejecutivos de cuenta intermediarios ni traspasos burocráticos.",
+        "kike-role": "Especialista en Automatización e Integración",
+        "kike-bio": "Especialista técnico con amplia experiencia en configuración de soluciones en la nube y SaaS, resolución de problemas, integración de APIs, automatización de flujos y soporte remoto. Trabaja en entornos de software, redes, Linux, dispositivos IoT y optimización de procesos de negocio, uniendo resolución práctica con comunicación clara y seguimiento confiable.",
+        "mikey-role": "Estratega Senior de SEO",
+        "mikey-bio": "Product Owner de SEO con más de 6 años liderando SEO técnico, estrategia de contenidos e iniciativas de crecimiento orgánico en empresas internacionales. Experimentado en hojas de ruta, auditorías técnicas, analítica, SEO multilingüe y coordinación con equipos de producto e ingeniería en múltiples mercados europeos. Traduce metas de negocio en estrategias prácticas y crecimiento medible.",
+        "diego-role": "Especialista en Contenido y Comunicaciones",
+        "diego-bio": "Comunicador estratégico con más de 10 años de experiencia liderando comunicaciones corporativas, estrategia digital y proyectos de contenido en entornos multiculturales e internacionales. Con formación en periodismo y edición, aporta criterio narrativo a mensajes de marca y contenidos de liderazgo. Ha liderado equipos remotos y coordinado proyectos desde la ideación hasta la publicación y control de calidad.",
+        "flavi-role": "Especialista en Contenido Digital",
+        "flavi-bio": "Estratega de contenidos y especialista en comunicaciones con experiencia en flujos integrales de publicación digital en sitios web, plataformas CMS y redes. Cuenta con amplio manejo de WordPress, Elementor, calendarios editoriales, control de calidad de contenidos, email marketing y activos digitales. Combina enfoque estratégico con ejecución meticulosa para que cada contenido esté impecable y funcional.",
+        "cta-badge": "Consulta y Propuesta",
+        "contact-headline": "CUÉNTANOS EN QUÉ ESTÁS TRABAJANDO.",
+        "contact-sub": "Hablemos de lo que tu negocio necesita. Cada empresa es distinta. Dinos en qué punto estás, qué buscas lograr y dónde sientes que las cosas están trabadas. Nosotros nos encargamos a partir de ahí.",
+        "label-direct": "Contacto Operativo Directo",
+        "location": "Londres · Operaciones Remotas Globales",
+        "form-name": "Nombre Completo / Empresa",
+        "form-email": "Correo Electrónico de Trabajo",
+        "form-type": "Tipo de Negocio / Industria",
+        "opt-local": "Servicio Local (Hostelería, Clínica, Especialista)",
+        "opt-prof": "Práctica Profesional (Legal, Médica, Arquitectura, Contabilidad)",
+        "opt-b2b": "B2B / Contratista Especializado / Industrial",
+        "opt-venture": "Empresa Independiente en Crecimiento",
+        "opt-other": "Otro Tipo de Negocio",
+        "form-help": "¿Cómo Podemos Ayudarte?",
+        "opt-start": "Start — Auditoría y Estrategia",
+        "opt-grow": "Grow — Implementación Prioritaria",
+        "opt-scale": "Scale — Sistema a Largo Plazo",
+        "opt-convo": "Conversación Inicial General",
+        "form-msg-label": "¿Dónde están trabadas las cosas o qué buscas mejorar?",
+        "form-msg-placeholder": "Cuéntanos brevemente sobre tu negocio actual, metas o desafíos...",
+        "form-btn": "Iniciar una conversación →",
+        "form-ok": "Consulta recibida. Un especialista senior revisará tus datos directamente.",
+        "footer-desc": "Hacemos que los negocios pequeños y en crecimiento sean más fáciles de encontrar, confiar y crecer a través de Contenido, SEO y Sistemas de IA.",
+        "footer-direct": "Consultas Directas",
+        "footer-nav": "Navegación",
+        "footer-pill": "Alianza directa con especialistas senior. Ejecución ágil sin burocracia de agencia corporativa."
+      }
+    };
+
+    let currentLang = localStorage.getItem("pistacho_lang") || "en";
+
+    function updateDOM(lang) {
+      document.documentElement.lang = lang;
+      
+      const label = document.getElementById("lang-label");
+      if (label) {
+        label.textContent = lang === "en" ? "EN | ESPAÑOL" : "ENGLISH | ES";
+      }
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (translations[lang] && translations[lang][key]) {
+          el.setAttribute("placeholder", translations[lang][key]);
+        }
+      });
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "es" : "en";
+      localStorage.setItem("pistacho_lang", currentLang);
+      updateDOM(currentLang);
+    }
+
+    function setFormPriority(level) {
+      const select = document.getElementById("priority-select");
+      if (select) {
+        select.value = level;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateDOM(currentLang);
+    });
+  </script>
+
+
+</body></html>
